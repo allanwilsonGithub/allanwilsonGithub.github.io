@@ -1,0 +1,103 @@
+<HTML>
+<HEAD>
+<TITLE>Finnish Colours</TITLE>
+<body text="#000066" bgcolor="#FFFFFF" link="#666666" vlink="#000066" alink="#3333FF" background="pics/moose1.jpg">
+</HEAD>
+<BODY>
+<p align=center><b><font face="Juice ITC"><font size=+4>&nbsp; Colours &nbsp;</font></font></B></P>
+
+<table align=center border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%"><form name="ddmessage"><table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="100%"><select name="selectbox" size="1" onChange="changecontent(this)">
+            	<option selected value="green">green</option>
+            	<option value="black">black</option>
+            	<option value="white">white</option>
+            	<option value="blue">blue</option>
+		<option value="dark blue">dark blue</option>
+		<option value="light blue">light blue</option>
+		<option value="red">red</option>
+		<option value="dark red">dark red</option>
+		<option value="light red">light red</option>
+		<option value="dark green">dark green</option>
+		<option value="light green">light green</option>
+		<option value="yellow">yellow</option>
+		<option value="orange">orange</option>
+		<option value="grey">grey</option>
+		<option value="dark grey">dark grey</option>
+		<option value="light grey">light grey</option>
+		<option value="pink">pink</option>
+		<option value="violet">violet</option>
+		<option value="silver">silver</option>
+		<option value="gold">gold</option>
+		<option value="coloured / colourful">coloured / colourful</option>
+		<option value="blond">blond</option>
+		<option value="brown">brown</option>
+		<option value="chestnut">chestnut</option>
+          </select><br>
+          </td>
+        </tr>
+        <tr>
+          <td width="100%"><textarea rows="2" name="contentbox" cols="35" wrap="virtual"></textarea><br>
+<font face="arial" size="-2"></font>
+</td>
+        </tr>
+      </table>
+    </form>
+    </td>
+  </tr>
+</table>
+
+<p>
+
+<script language="JavaScript">
+
+/*
+Drop down messages script
+By JavaScript Kit (http://javascriptkit.com)
+Over 400+ free scripts here!
+*/
+
+//change contents of message box, where the first one corresponds with the first drop down box, second with second box etc
+var thecontents=new Array()
+
+thecontents[0]='vihreä'
+thecontents[1]='musta'
+thecontents[2]='valkoinen'
+thecontents[3]='sininen'
+thecontents[4]='tummansinenin'
+thecontents[5]='vaaleansinenin'
+thecontents[6]='punainen'
+thecontents[7]='tummanpunainen'
+thecontents[8]='vaaleanpunainen'
+thecontents[9]='tummanvihreä'
+thecontents[10]='vaaleanvihreä'
+thecontents[11]='keltainen'
+thecontents[12]='oranssi'
+thecontents[13]='harmaa'
+thecontents[14]='tummanharmaa'
+thecontents[15]='vaaleanvihrea'
+thecontents[16]='roosa'
+thecontents[17]='sinipunainen, violetti'
+thecontents[18]='hopeanvärinen'
+thecontents[19]='kullanvärinen'
+thecontents[20]='kirjava'
+thecontents[21]='vaalea'
+thecontents[22]='ruskea'
+thecontents[23]='kastanjanruskea'
+
+
+//don't edit pass this line
+
+function changecontent(which){
+document.ddmessage.contentbox.value=thecontents[which.selectedIndex]
+}
+
+document.ddmessage.contentbox.value=thecontents[document.ddmessage.selectbox.selectedIndex]
+</script>
+
+<P align=center><A HREF="index.html"><IMG SRC="pics/home.gif" BORDER=0 ALT="Home"></A></P>
+
+</BODY> 
+</HTML>

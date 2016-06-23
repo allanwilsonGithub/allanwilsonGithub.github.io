@@ -1,0 +1,148 @@
+<HTML>
+<HEAD>
+<TITLE>Finnish Numbers</TITLE>
+<body text="#000066" bgcolor="#FFFFFF" link="#666666" vlink="#000066" alink="#3333FF" background="pics/moose1.jpg">
+</HEAD>
+<BODY>
+<p align=center><b><font face="Juice ITC"><font size=+4>&nbsp; Numbers &nbsp;</font></font></B></P>
+
+<table align=center border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%"><form name="ddmessage"><table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="100%"><select name="selectbox" size="1" onChange="changecontent(this)">
+            	<option selected value="1">1</option>
+            	<option value="2">2</option>
+            	<option value="3">3</option>
+            	<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+		<option value="11">11</option>
+            	<option value="12">12</option>
+            	<option value="13">13</option>
+            	<option value="14">14</option>
+		<option value="15">15</option>
+		<option value="16">16</option>
+		<option value="17">17</option>
+		<option value="18">18</option>
+		<option value="19">19</option>
+		<option value="20">20</option>
+		<option value="21">21</option>
+            	<option value="22">22</option>
+            	<option value="23">23</option>
+            	<option value="24">24</option>
+		<option value="25">25</option>
+		<option value="26">26</option>
+		<option value="27">27</option>
+		<option value="28">28</option>
+		<option value="29">29</option>
+		<option value="30">30</option>
+		<option value="31">31</option>
+		<option value="40">40</option>
+		<option value="50">50</option>
+		<option value="60">60</option>
+		<option value="70">70</option>
+		<option value="80">80</option>
+		<option value="90">90</option>
+		<option value="100">100</option>
+		<option value="200">200</option>
+		<option value="1000">1000</option>
+		<option value="100 000">100 000</option>
+		<option value="1 000 000">1 000 000</option>
+		<option value="5 000 000">5 000 000</option>
+		<option value="1 000 000 000">1 000 000 000</option>
+		<option value="first">first</option>          
+		<option value="second">second</option>
+		<option value="third">third</option>
+		</select><br>
+          </td>
+        </tr>
+        <tr>
+          <td width="100%"><textarea rows="2" name="contentbox" cols="35" wrap="virtual"></textarea><br>
+<font face="arial" size="-2"></font>
+</td>
+        </tr>
+      </table>
+    </form>
+    </td>
+  </tr>
+</table>
+
+<p>
+
+<script language="JavaScript">
+
+/*
+Drop down messages script
+By JavaScript Kit (http://javascriptkit.com)
+Over 400+ free scripts here!
+*/
+
+//change contents of message box, where the first one corresponds with the first drop down box, second with second box etc
+var thecontents=new Array()
+
+thecontents[0]='yksi'
+thecontents[1]='kaksi'
+thecontents[2]='kolme'
+thecontents[3]='neljä'
+thecontents[4]='viisi'
+thecontents[5]='kuusi'
+thecontents[6]='seitsemän'
+thecontents[7]='kahdeksan'
+thecontents[8]='yhdeksän'
+thecontents[9]='kymmenen'
+thecontents[10]='yksitoista'
+thecontents[11]='kaksitoista'
+thecontents[12]='kolmetoista'
+thecontents[13]='neljätoista'
+thecontents[14]='viisitoista'
+thecontents[15]='kuusitoista'
+thecontents[16]='seitsemäntoista'
+thecontents[17]='kahdeksantoista'
+thecontents[18]='yhdeksäntoista'
+thecontents[19]='kaksikymmentä'
+thecontents[20]='kaksikymmentäyksi'
+thecontents[21]='kaksikymmentäkaksi'
+thecontents[22]='kaksikymmentäkolme'
+thecontents[23]='kaksikymmentänelyä'
+thecontents[24]='kaksikymmentäviisi'
+thecontents[25]='kaksikymmentäkuusi'
+thecontents[26]='kaksikymmentäseitsemän'
+thecontents[27]='kaksikymmentäkahdeksan'
+thecontents[28]='kaksikymmentäyhdeksän'
+thecontents[29]='kolmekymmentä'
+thecontents[30]='kolmekymmentäyksi'
+thecontents[31]='neljäkymmentä'
+thecontents[32]='viisikymmentä'
+thecontents[33]='kuusikymmentä'
+thecontents[34]='seitsemänkymmentä'
+thecontents[35]='kahdeksankymmentä'
+thecontents[36]='yhdeksänkymmentä'
+thecontents[37]='sata'
+thecontents[38]='kaksisata'
+thecontents[39]='tuhat'
+thecontents[40]='satatuhatta'
+thecontents[41]='miljoona'
+thecontents[42]='viisi miljoona'
+thecontents[43]='miljardi'
+thecontents[44]='ensimmäinen'
+thecontents[45]='toinen'
+thecontents[46]='kolmas'
+
+//don't edit pass this line
+
+function changecontent(which){
+document.ddmessage.contentbox.value=thecontents[which.selectedIndex]
+}
+
+document.ddmessage.contentbox.value=thecontents[document.ddmessage.selectbox.selectedIndex]
+</script>
+
+<P align=center><A HREF="index.html"><IMG SRC="pics/home.gif" BORDER=0 ALT="Home"></A></P>
+
+</BODY> 
+</HTML>

@@ -1,0 +1,117 @@
+<HTML>
+<HEAD>
+<TITLE>Finnish Verbs</TITLE>
+<body text="#000066" bgcolor="#FFFFFF" link="#666666" vlink="#000066" alink="#3333FF" background="pics/moose1.jpg">
+</HEAD>
+<BODY>
+<p align=center><b><font face="Juice ITC"><font size=+4>&nbsp; Verbs &nbsp;</font></font></B></P>
+
+<P><TABLE ALIGN="CENTER" BORDER="1" WIDTH="70%" CELLSPACING="2"
+CELLPADDING="0">
+  <TR>
+    <TD WIDTH="100%"></TD>
+  </TR>   
+  <TR>
+    <TH>Person & Number</TH> 
+    <TH> olla <BR> 'to be' </TH>
+    <TH> asu/asa <BR> 'to live' </TH>
+    <TH> puhu/puha <BR> 'to speak' </TH>
+  </TR>    
+  <TR align=left>
+    <TH>1st Person singular -n</TH> 
+    <TD>minä olen</TD> 
+    <TD>minä asun</TD> 
+    <TD>minä puhun</TD>  
+  </TR>
+  <TR align=left>
+    <TH>2nd person singular -t</TH> 
+    <TD>sinä olet</TD> 
+    <TD>sinä asut</TD> 
+    <TD>sinä puhut</TD> 
+  </TR>
+  <TR align=left>
+    <TH>3rd person singular (usually ends with a vowel)</TH> 
+    <TD>hän / se on</TD> 
+    <TD>hän / se asuu</TD> 
+    <TD>hän / se puhuu</TD> 
+  </TR>
+
+  <TR align=left>
+    <TH>1st person plural -mme</TH> 
+    <TD>me olemme</TD> 
+    <TD>me asumme</TD> 
+    <TD>me puhumme</TD> 
+  </TR>
+
+  <TR align=left>
+    <TH>2nd person plural -tte</TH> 
+    <TD>te olette</TD> 
+    <TD>te assutte</TD> 
+    <TD>te puhutte</TD> 
+  </TR>
+
+  <TR align=left>
+    <TH>3rd person plural -vat / -vät</TH> 
+    <TD>he / ne ovat</TD> 
+    <TD>he / ne asuvat</TD> 
+    <TD>ne / ne puhuvat</TD> 
+  </TR>
+
+</TABLE>
+
+<p>&nbsp;</p>
+
+<table align=center border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%"><form name="ddmessage"><table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="100%"><select name="selectbox" size="1" onChange="changecontent(this)">
+            <option selected value="to come">to come</option>
+            <option value="to go">to go</option>
+            <option value="to make">to make</option>
+            <option value="to feel/do/can/be able to">to feel/do/can/be able to</option>
+          </select><br>
+          </td>
+        </tr>
+        <tr>
+          <td width="100%"><textarea rows="6" name="contentbox" cols="15" wrap="virtual"></textarea><br>
+<font face="arial" size="-2"></font>
+</td>
+        </tr>
+      </table>
+    </form>
+    </td>
+  </tr>
+</table>
+
+<p>
+
+<script language="JavaScript">
+
+/*
+Drop down messages script
+By JavaScript Kit (http://javascriptkit.com)
+Over 400+ free scripts here!
+*/
+
+//change contents of message box, where the first one corresponds with the first drop down box, second with second box etc
+var thecontents=new Array()
+
+thecontents[0]='minä tulen     sinä tulet     hän tulee      me tulemme     te tulette     he tulevat'
+thecontents[1]='minä menen     sinä menet     hän menee      me menemme     te menette'
+thecontents[2]='minä teen      sinä teet      hän tekee      me teemme      te teette      he tekevät'
+thecontents[3]='minä voin      sinä voit      hän voi        me voimme      te voitte      he voivat'
+
+//don't edit pass this line
+
+function changecontent(which){
+document.ddmessage.contentbox.value=thecontents[which.selectedIndex]
+}
+
+document.ddmessage.contentbox.value=thecontents[document.ddmessage.selectbox.selectedIndex]
+</script>
+
+<P align=center><A HREF="index.html"><IMG SRC="pics/home.gif" BORDER=0 ALT="Home"></A></P>
+
+</BODY> 
+</HTML>

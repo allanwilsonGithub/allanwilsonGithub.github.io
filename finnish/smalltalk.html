@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+<TITLE>Finnish Smalltalk</TITLE>
+<body text="#000066" bgcolor="#FFFFFF" link="#666666" vlink="#000066" alink="#3333FF" background="pics/moose1.jpg">
+</HEAD>
+<BODY>
+<p align=center><b><font face="Juice ITC"><font size=+4>&nbsp; Smalltalk &nbsp;</font></font></B></P>
+
+<table align=center border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%"><form name="ddmessage"><table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="100%"><select name="selectbox" size="1" onChange="changecontent(this)">
+            <option selected value="yes">yes</option>
+            <option value="no">no</option>
+            <option value="and">and</option>
+            <option value="again">again</option>
+	    <option value="to be drunk">to be drunk</option>
+	    <option value="I'll see you tomorrow">I'll see you tomorrow</option>
+	    <option value="I'll kill you tomorrow">I'll kill you tomorrow</option>
+	    <option value="I love you">I love you</option>
+	    <option value="I want you">I want you</option>
+	    <option value="I like you">I like you</option>
+	    <option value="I hate you">I hate you</option>
+	    <option value="at night">at night</option>
+	    <option value="it's one o'clock">it's one o'clock</option>
+	    <option value="it's half past six">it's half past six</option>
+	    <option value="what a pity">what a pity</option>
+	    <option value="I had a nice time">I had a nice time</option>
+	    <option value="I had a nice time">I would like to pay</option>
+          </select><br>
+          </td>
+        </tr>
+        <tr>
+          <td width="100%"><textarea rows="2" name="contentbox" cols="35" wrap="virtual"></textarea><br>
+<font face="arial" size="-2"></font>
+</td>
+        </tr>
+      </table>
+    </form>
+    </td>
+  </tr>
+</table>
+
+<p>
+
+<script language="JavaScript">
+
+/*
+Drop down messages script
+By JavaScript Kit (http://javascriptkit.com)
+Over 400+ free scripts here!
+*/
+
+//change contents of message box, where the first one corresponds with the first drop down box, second with second box etc
+var thecontents=new Array()
+
+thecontents[0]='joo'
+thecontents[1]='ei'
+thecontents[2]='ja'
+thecontents[3]='taas'
+thecontents[4]='olla humalassa'
+thecontents[5]='Minä tapaan sinut huomenna'
+thecontents[6]='Minä tapan sinut huomenna'
+thecontents[7]='(Minä) rakastan sinua'
+thecontents[8]='Tahdon sinut'
+thecontents[9]='(Minä) pidän sinusta'
+thecontents[10]='(Minä) vihaan sinua'
+thecontents[11]='öisin'
+thecontents[12]='kello on yksi'
+thecontents[13]='kello on puoli seitsemän'
+thecontents[14]='vahinko'
+thecontents[15]='Minulla oli mukavaa'
+thecontents[16]='Saanko laskun'
+
+//don't edit pass this line
+
+function changecontent(which){
+document.ddmessage.contentbox.value=thecontents[which.selectedIndex]
+}
+
+document.ddmessage.contentbox.value=thecontents[document.ddmessage.selectbox.selectedIndex]
+</script>
+
+<P align=center><A HREF="index.html"><IMG SRC="pics/home.gif" BORDER=0 ALT="Home"></A></P>
+
+</BODY> 
+</HTML>

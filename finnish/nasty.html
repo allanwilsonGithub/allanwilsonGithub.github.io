@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<TITLE>Finnish Nasty</TITLE>
+<body text="#000066" bgcolor="#FFFFFF" link="#666666" vlink="#000066" alink="#3333FF" background="pics/moose1.jpg">
+</HEAD>
+<BODY>
+<p align=center><b><font face="Juice ITC"><font size=+4>&nbsp; Nasty Talk <BR> (be careful with these ;o) &nbsp;</font></font></B></P>
+
+<table align=center border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%"><form name="ddmessage"><table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="100%"><select name="selectbox" size="1" onChange="changecontent(this)">
+            	<option selected value="Idiot!">Idiot!</option>
+            	<option value="stupid">stupid</option>
+            	<option value="shit!">shit!</option>
+            	<option value="shut up!">shut up!</option>
+		<option value="enough!">enough!</option>
+		<option value="are you kidding?">are you kidding?</option>
+		<option value="get away!">get away!</option>
+		<option value="You have beautiful blue eyes.">You have beautiful blue eyes.</option>
+          </select><br>
+          </td>
+        </tr>
+        <tr>
+          <td width="100%"><textarea rows="6" name="contentbox" cols="35" wrap="virtual"></textarea><br>
+<font face="arial" size="-2"></font>
+</td>
+        </tr>
+      </table>
+    </form>
+    </td>
+  </tr>
+</table>
+
+<p>
+
+<script language="JavaScript">
+
+/*
+Drop down messages script
+By JavaScript Kit (http://javascriptkit.com)
+Over 400+ free scripts here!
+*/
+
+//change contents of message box, where the first one corresponds with the first drop down box, second with second box etc
+var thecontents=new Array()
+
+thecontents[0]='nuija!'
+thecontents[1]='tyhm‰'
+thecontents[2]='voi paska!'
+thecontents[3]='suu tukkoon!'
+thecontents[4]='nyt riitt‰‰!'
+thecontents[5]='s‰ puhut ihan hassuja?'
+thecontents[6]='nyt h‰ivy!'
+thecontents[7]='Sinulla on kauniit siniset silm‰t'
+
+
+//don't edit pass this line
+
+function changecontent(which){
+document.ddmessage.contentbox.value=thecontents[which.selectedIndex]
+}
+
+document.ddmessage.contentbox.value=thecontents[document.ddmessage.selectbox.selectedIndex]
+</script>
+
+<P align=center><A HREF="index.html"><IMG SRC="pics/home.gif" BORDER=0 ALT="Home"></A></P>
+
+</BODY> 
+</HTML>

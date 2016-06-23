@@ -1,0 +1,126 @@
+<HTML>
+<HEAD>
+<TITLE>Finnish Date</TITLE>
+<body text="#000066" bgcolor="#FFFFFF" link="#666666" vlink="#000066" alink="#3333FF" background="pics/moose1.jpg">
+</HEAD>
+<BODY>
+<p align=center><b><font face="Juice ITC"><font size=+4>&nbsp; Date and Time &nbsp;</font></font></B></P>
+
+<table align=center border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%"><form name="ddmessage"><table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="100%"><select name="selectbox" size="1" onChange="changecontent(this)">
+            <option selected value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+	    <option value="Friday">Friday</option>
+	    <option value="Saturday">Saturday</option>
+	    <option value="Sunday">Sunday</option>
+	    <option value="January">January</option>
+	    <option value="Februray">February</option>
+	    <option value="March">March</option>
+	    <option value="April">April</option>
+	    <option value="May">May</option>
+	    <option value="June">June</option>
+	    <option value="July">July</option>
+	    <option value="August">August</option>
+	    <option value="September">September</option>
+	    <option value="October">October</option>
+	    <option value="November">November</option>
+	    <option value="December">December</option>
+	    <option value="Spring">Spring</option>
+	    <option value="Summer">Summer</option>
+	    <option value="Autumn">Autumn</option>
+	    <option value="Winter">Winter</option>
+	    <option value="today">today</option>
+	    <option value="tomorrow">tomorrow</option>
+	    <option value="yesterday">yesterday</option>
+	    <option value="this week">this week</option>
+	    <option value="last week">last week</option>
+	    <option value="next week">next week</option>
+	    <option value="this year">this year</option>
+	    <option value="last year">last year</option>
+	    <option value="next year">next year</option>
+	    <option value="then">then</option>
+	    <option value="always">always</option>
+	    <option value="it's one o'clock">it's one o'clock</option>
+	    <option value="it's half past six">it's half past six</option>
+          </select><br>
+          </td>
+        </tr>
+        <tr>
+          <td width="100%"><textarea rows="2" name="contentbox" cols="35" wrap="virtual"></textarea><br>
+<font face="arial" size="-2"></font>
+</td>
+        </tr>
+      </table>
+    </form>
+    </td>
+  </tr>
+</table>
+
+<p>
+
+<script language="JavaScript">
+
+/*
+Drop down messages script
+By JavaScript Kit (http://javascriptkit.com)
+Over 400+ free scripts here!
+*/
+
+//change contents of message box, where the first one corresponds with the first drop down box, second with second box etc
+var thecontents=new Array()
+
+thecontents[0]='maanantai'
+thecontents[1]='tiistai'
+thecontents[2]='keskiviikko'
+thecontents[3]='torstai'
+thecontents[4]='perjantai'
+thecontents[5]='lauantai'
+thecontents[6]='sunnuntai'
+thecontents[7]='tammikuu'
+thecontents[8]='helmikuu'
+thecontents[9]='maaliskuu'
+thecontents[10]='huhtikuu'
+thecontents[11]='toukokuu'
+thecontents[12]='kes‰kuu'
+thecontents[13]='hein‰kuu'
+thecontents[14]='elokuu'
+thecontents[15]='syyskuu'
+thecontents[16]='lokakuu'
+thecontents[17]='marraskuu'
+thecontents[18]='joulukuu'
+thecontents[19]='kev‰t'
+thecontents[20]='kes‰'
+thecontents[21]='syksy'
+thecontents[22]='talvi'
+thecontents[23]='t‰n‰‰n'
+thecontents[24]='huomenna'
+thecontents[25]='eilen'
+thecontents[26]='t‰ll‰ viikolla'
+thecontents[27]='viime viikolla'
+thecontents[28]='ensi viikolla'
+thecontents[29]='t‰n‰ vuonna'
+thecontents[30]='viime vuonna'
+thecontents[31]='ensi vuonna'
+thecontents[32]='silloin'
+thecontents[33]='aina'
+thecontents[34]='kello on yksi'
+thecontents[35]='kello on puoli seitsem‰n'
+
+//don't edit pass this line
+
+function changecontent(which){
+document.ddmessage.contentbox.value=thecontents[which.selectedIndex]
+}
+
+document.ddmessage.contentbox.value=thecontents[document.ddmessage.selectbox.selectedIndex]
+</script>
+
+<P align=center><A HREF="index.html"><IMG SRC="pics/home.gif" BORDER=0 ALT="Home"></A></P>
+
+</BODY> 
+</HTML>
