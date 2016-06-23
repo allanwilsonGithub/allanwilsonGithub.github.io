@@ -1,1 +1,0 @@
-start \Mnemosyne\mnemosyne.exe -d \.mnemosyne
