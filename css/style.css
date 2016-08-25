@@ -1,0 +1,20 @@
+  body {
+    background-color: #c9d8c5;
+    padding-top: 60px;
+    background-image: url("bg-body.gif");
+  }
+
+<style>
+  .color-1 {
+    color: #B76EB8;
+  }
+  .color-2 {
+    color: #053e57;
+  }
+  .color-3 {
+    color: #B76EB8;
+  }
+  .large-text {
+    font-size: 30px;
+  }
+</style>

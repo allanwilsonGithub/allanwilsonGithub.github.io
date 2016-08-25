@@ -17,9 +17,9 @@
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- Javascript Tooltip -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,6 +31,26 @@
 </head>
 
 <body>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+
+});
+</script>
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -77,108 +97,61 @@
     </nav>
 
     <!-- Page Content -->
-<div class="container-fluid">
-  <div class="row heading-color col-xs-10" style="border: none">
-    <div class="col-xs-6 textcontainer " style="vertical-align: middle;">
-      <h3 class="text-color" id="welcome">Welcome</h3>
-      <p class="brown-color"><font size="2">Welcome to my little corner of the web.</font></p>
-      <p class="brown-color"><font size="2">This website is a place for me to dabble with web authoring, keep track of various sports and hobbies and for Paula and I to keep in contact with our friends and family around the globe.</font></p>
-    </div>
-    <div class="col-xs-2">
-    </div>
-    <div class="col-xs-4">
-    <br>
-    <img src="images\allanWilsonCartoon.jpg" class="img-responsive img-circle" alt="Allan Wilson">
-    <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-10">
-    <h3 class="text-color text-right" id="sports_and_hobbies">Sports and Hobbies</h3>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-    </div>
-  </div>
-  <div class="row heading-color">
-    <div class="col-xs-10">
-    <h3 class="heading-color text-color" id="cookbook">Cookbook</h3>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-10">
-    <h3 class="text-color text-color" id="pictures">Pictures</h3>
-    <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-    </div>
-  </div>
-  <div class="row heading-color">
-    <div class="col-xs-10">
-    <h3 class="heading-color text-color" id="suomea">Suomea</h3>
-    <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-10">
-      <h3 class="text-color" id="portfolio">Portfolio</h3>
-      <div class="row">
-        <div class="col-md-4">
-          <a href="http://www.allanwilson.net" class="thumbnail">
-          <p>My old website</p>    
-          <img src="images\allanWilsonCartoon.jpg" alt="AllanWilson.net">
-          </a>
+        <div class="row ">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <br>
+                <br>
+                <h3 class="color-2" id="welcome">Welcome</h3>
+                <p class="color-2"><font size="2">Welcome to my little corner of the web.</font></p>
+                <p class="color-2"><font size="2">This website is a place for me to dabble with web authoring, keep track of various sports and hobbies and for Paula and I to keep in contact with our friends and family around the globe.</font></p>
+                <img src="images\allanWilsonCartoon.jpg" class="img-responsive img-circle center-block" alt="Allan Wilson">
+                <br>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="row heading-color text-color">
-    <div class="col-xs-10">
-    <h3 class="heading-color" id="contact">Contact</h3>
-      <a class="btn btn-info" href="https://www.facebook.com/AllanWilson1974" role="button">Facebook</a>
-      <a class="btn btn-primary" href="https://www.facebook.com/AllanWilson1974" role="button">Twitter</a>
-    </div>
-  </div>
-</div>
-</div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h3 class="color-2" id="sports_and_hobbies">Sports and Hobbies</h3>
+            </div>
+        </div>
+ 
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h3 class="color-2" id="cookbook">Cookbook</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h3 class="color-2" id="pictures">Pictures</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+               <h3 class="color-2" id="suomea">Suomea</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+            <h3 class="color-2" id="portfolio">Portfolio</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="http://www.allanwilson.net" data-toggle="tooltip" title="My old website" class="thumbnail">  
+                        <img src="images\old_allanwilson_net.png" alt="old_AllanWilson.net">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+            <h3 class="color-2" id="contact">Contact Me</h3>
+            <a class="btn btn-info" href="https://www.facebook.com/AllanWilson1974" role="button">Facebook</a>
+            <a class="btn btn-primary" href="mailto:allan@allanwilson.net" role="button">Email</a>
+            <br>
+            <br>
+            </div>
+        </div>
