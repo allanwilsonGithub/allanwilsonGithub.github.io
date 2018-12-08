@@ -9,6 +9,11 @@ GAME RULES:
 
 */
 
+//TODO: Player loses his entire score when he rolls two 6 in a row (save previous roll in a variable)
+//TODO: Add an input field where the user can set the winning score (.value property)
+//TODO: Add a 2nd dice. The player loses his current score if any dice shows 1
+//TODO add a 1 sec wait here so that the dice with 1 is shown for a bit before disapearing
+
 var scores, roundScore, activePlayer, diceSet, gamePlaying;
 
 init();
@@ -53,7 +58,7 @@ document.querySelector('.btn-hold').addEventListener('click',function(){
     document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
     
     // Check if the player has won the game
-    if (scores[activePlayer] >= 20){
+    if (scores[activePlayer] >= 100){
         document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
         document.querySelector('.dice').style.display = 'none';
         document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
@@ -99,7 +104,6 @@ function init(){
 
 function nextPlayer(){
     document.querySelector('.dice').style.display = 'block';
-    //TODO add a 1 sec wait here so that the dice with 1 is shown for a bit before disapearing
     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
     roundScore = 0;
     document.getElementById('current-0').textContent = roundScore;
