@@ -9,12 +9,14 @@ GAME RULES:
 
 */
 
-var scores, roundScore, activePlayer;
+var scores, roundScore, activePlayer, diceSet;
 
 scores = [0,0];
 roundScore = 0;
 activePlayer = 0;
+diceSet = 2
 
+//TODO add a toggle to choose which diceSet (of images) to use
 
 
 var x = document.querySelector('#score-0').textContent;
@@ -39,7 +41,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
     // 2. Display the result
     var diceDOM = document.querySelector('.dice');
     document.querySelector('.dice').style.display = 'block';
-    diceDOM.src = 'dice-' + dice + '.png'
+    diceDOM.src = 'dice-pics' + diceSet + '/' + 'dice-' + dice + '.png'
 
     // 3. Update the round score IF the rolled number is NOT 1
     if (dice !== 1) {
@@ -47,6 +49,8 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         document.getElementById('current-' + activePlayer).textContent = roundScore;
         document.querySelector('.dice').style.display = 'block';
     } else {
+        document.querySelector('.dice').style.display = 'block';
+        //TODO add a 1 sec wait here so that the dice with 1 is shown for a bit before disapearing
         activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
         roundScore = 0;
         document.getElementById('current-0').textContent = roundScore;
