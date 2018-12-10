@@ -13,7 +13,7 @@ GAME RULES:
 //TODO: Add a 2nd dice. The player loses his current score if any dice shows 1
 //TODO add a 1 sec wait here so that the dice with 1 is shown for a bit before disapearing
 
-var scores, roundScore, activePlayer, diceSet, gamePlaying, previous_roll;
+var scores, roundScore, activePlayer, diceSet, gamePlaying, previous_roll, numberLimit;
 
 init();
 
@@ -62,7 +62,7 @@ document.querySelector('.btn-hold').addEventListener('click',function(){
     document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
     
     // Check if the player has won the game
-    if (scores[activePlayer] >= 100){
+    if (scores[activePlayer] >= numberLimit){
         document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
         document.querySelector('.dice').style.display = 'none';
         document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
@@ -79,6 +79,15 @@ document.querySelector('.btn-hold').addEventListener('click',function(){
 // New Game
 document.querySelector('.btn-new').addEventListener('click', init);
 
+// Set Number Limit
+document.querySelector('.btn-submit').addEventListener('click', function(){
+    var inputNumber = document.getElementById("limitNum").value
+    if (inputNumber > 0 && inputNumber <= 100){
+        numberLimit = document.getElementById("limitNum").value;
+    }
+    
+})
+
 // Dice sets
 document.querySelector('.btn-pics').addEventListener('click', function(){
     diceSet === 1 ? diceSet = 2 : diceSet = 1;
@@ -90,6 +99,7 @@ function init(){
     activePlayer = 0;
     diceSet = 1;
     gamePlaying = true;
+    numberLimit = 100;
 
     document.querySelector('.dice').style.display = 'none';
 
