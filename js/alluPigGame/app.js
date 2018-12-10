@@ -9,12 +9,11 @@ GAME RULES:
 
 */
 
-//TODO: Player loses his entire score when he rolls two 6 in a row (save previous roll in a variable)
 //TODO: Add an input field where the user can set the winning score (.value property)
 //TODO: Add a 2nd dice. The player loses his current score if any dice shows 1
 //TODO add a 1 sec wait here so that the dice with 1 is shown for a bit before disapearing
 
-var scores, roundScore, activePlayer, diceSet, gamePlaying;
+var scores, roundScore, activePlayer, diceSet, gamePlaying, previous_roll;
 
 init();
 
@@ -33,10 +32,15 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
     diceDOM.src = 'dice-pics' + diceSet + '/' + 'dice-' + dice + '.png'
 
     // 3. Update the round score IF the rolled number is NOT 1
-    if (dice !== 1) {
+    
+    if (dice === 6 && previous_roll === 6) {
+        scores[activePlayer] = 0;    
+        nextPlayer();
+    } else if (dice !== 1) {
         roundScore += dice;
         document.getElementById('current-' + activePlayer).textContent = roundScore;
         document.querySelector('.dice').style.display = 'block';
+        previous_roll = dice;
     } else {
         // Next player
         nextPlayer();
