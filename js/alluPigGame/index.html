@@ -29,9 +29,10 @@
                 </div>
             </div>
             
+            
             <input class="inputBox" type="number" id="limitNum" value="100">
-            <p class="numberLimitDisplay"></p>
-
+            <button class="game-rules" id="gameRules">Game Rules</button>
+            <button class="show-limit" id="show-limit-number">90</button>
             <button class="btn-submit"><i class="ion-ios-download-outline"></i>Set Number Limit</button>
             <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
             <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
@@ -39,6 +40,30 @@
             <button class="btn-pics"><i class="ion-ios-loop"></i>Toggle Dice Set</button>
             
             <img src="dice-pics1/dice-5.png" alt="Dice" class="dice">
+        </div>
+        
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+            <div class="modal-content">
+            <span class="close">&times;</span>
+            <pre>GAME RULES:
+            
+            - The game has 2 players, playing in rounds
+            - In each turn, a player rolls a dice as many times as he wishes.
+                  Each result gets added to his ROUND score
+            - BUT, if the player rolls a 1, all his ROUND score gets lost.
+                  After that, it's the next player's turn
+            - The player can choose to 'Hold', which means that his
+                  ROUND score gets added to his GLOBAL score. After that, it's the next player's turn
+            - The first player to reach 100 points (or whatever you set for the limit)
+                  on GLOBAL score wins the game
+            
+            </pre>
+            </div>
+
         </div>
         
         <script src="app.js"></script>

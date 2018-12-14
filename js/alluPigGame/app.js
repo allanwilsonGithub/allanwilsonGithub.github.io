@@ -22,6 +22,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 
     // State variable to stop the game play if someone wins
     if (gamePlaying) {
+    console.log({previous_roll});
 
     // 1. Random number
     var dice = Math.floor(Math.random() * 6) + 1;
@@ -33,8 +34,9 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 
     // 3. Update the round score IF the rolled number is NOT 1
     
-    if (dice === 6 && previous_roll === 6) {
-        scores[activePlayer] = 0;    
+    if (dice === 6 && previous_roll > 1) {
+        scores[activePlayer] = 0;
+        document.querySelector('#score-' + activePlayer).textContent = 0;    
         nextPlayer();
     } else if (dice !== 1) {
         roundScore += dice;
@@ -84,6 +86,7 @@ document.querySelector('.btn-submit').addEventListener('click', function(){
     var inputNumber = document.getElementById("limitNum").value
     if (inputNumber > 0 && inputNumber <= 100){
         numberLimit = document.getElementById("limitNum").value;
+        document.getElementById('show-limit-number').textContent = numberLimit;
     }
     
 })
@@ -126,4 +129,31 @@ function nextPlayer(){
     document.querySelector('.player-1-panel').classList.toggle('active');
     document.querySelector('.dice').style.display = 'block';
     document.querySelector('.dice').style.display = 'none';
+    previous_roll = 0;
+}
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("gameRules");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    }
 }
