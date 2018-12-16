@@ -170,9 +170,18 @@ i {
 .btn-hold { top: 467px;}
 .btn-pics { top: 515px;}
 
+.dice2 {
+    position: absolute;
+    left: 60%;
+    top: 250px;
+    transform: translateX(-50%);
+    height: 75px;
+    box-shadow: 5px 10px 60px rgba(241, 22, 22, 0.1);
+}
+
 .dice {
     position: absolute;
-    left: 50%;
+    left: 40%;
     top: 250px;
     transform: translateX(-50%);
     height: 100px;
