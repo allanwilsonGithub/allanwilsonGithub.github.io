@@ -4,6 +4,7 @@ var all_tags = ['sampo', 'seela', 'beer', 'allan'];
 all_images = ['sampo.jpg','beer.jpg','allan.jpg','seela.jpg','seela_sampo.jpg']
 
 //TODO 2: Allow user to add and remove tags to search for.
+//TODO: 3. Bug: If a pic has 2 tags. Only display it once in the page
 
 
 refreshImages = function() {
