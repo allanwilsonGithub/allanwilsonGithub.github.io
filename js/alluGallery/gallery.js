@@ -1,22 +1,41 @@
 var all_tags = ['sampo', 'seela', 'beer', 'allan'];
-selected_tags =[];
 
-//TODO 3: Gather these image names just by walking through the directory.
-all_images = ['sampo.jpg','beer.jpg','allan.jpg','seela.jpg']
+//TODO 1: Gather these image names just by walking through the directory. Node.js time?
+all_images = ['sampo.jpg','beer.jpg','allan.jpg','seela.jpg','seela_sampo.jpg']
 
-//TODO 2: Run this code whenever any radiobutton is clicked. And then refresh the page contents based on selected_tags
-for (i = 0; i < all_tags.length; i++){
-    if (document.getElementById(all_tags[i] + '-checkbox').checked) {
-        selected_tags.push(all_tags[i])
+//TODO 2: Allow user to add and remove tags to search for.
+
+
+refreshImages = function() {
+    //Clear all images
+    selected_tags =[];
+    var myNode = document.getElementById("images");
+    while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
     }
-}
 
-for (i = 0; i < selected_tags.length; i++){
-    for (no = 0; no < all_images.length; no++){
-        if (all_images[no].includes(selected_tags[i])) {
-            console.log('Include image: ' + all_images[no]);
-        // TODO 1: Update UI to include the image
+    // Which checkboxes are checked?
+    for (i = 0; i < all_tags.length; i++){
+        if (document.getElementById(all_tags[i] + '-checkbox').checked) {
+            selected_tags.push(all_tags[i])
         }
     }
-     
+    
+    // Match selected tags to images
+    for (i = 0; i < selected_tags.length; i++){
+        for (no = 0; no < all_images.length; no++){
+            if (all_images[no].includes(selected_tags[i])) {
+                // Update UI to include each image
+                var img = document.createElement('span');
+                img.innerHTML = '<img src="media/' + all_images[no] + '" class="page-image"></img>';
+                document.getElementById('images').appendChild(img)
+            }
+        }
+         
+    }
 }
+
+document.getElementById('sampo-checkbox').addEventListener('click', refreshImages);
+document.getElementById('seela-checkbox').addEventListener('click', refreshImages);
+document.getElementById('beer-checkbox').addEventListener('click', refreshImages);
+document.getElementById('allan-checkbox').addEventListener('click', refreshImages);
