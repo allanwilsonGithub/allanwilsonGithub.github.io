@@ -4,7 +4,6 @@ var all_tags = ['sampo', 'seela', 'beer', 'allan'];
 all_images = ['sampo.jpg','beer.jpg','allan.jpg','seela.jpg','seela_sampo.jpg']
 
 //TODO 2: Allow user to add and remove tags to search for.
-//TODO: 3. Bug: If a pic has 2 tags. Only display it once in the page
 
 
 refreshImages = function() {
@@ -23,16 +22,17 @@ refreshImages = function() {
     }
     
     // Match selected tags to images
+    displayed_images = []
     for (i = 0; i < selected_tags.length; i++){
         for (no = 0; no < all_images.length; no++){
-            if (all_images[no].includes(selected_tags[i])) {
+            if (all_images[no].includes(selected_tags[i]) && displayed_images.includes(all_images[no]) === false) {
                 // Update UI to include each image
                 var img = document.createElement('span');
                 img.innerHTML = '<img src="media/' + all_images[no] + '" class="page-image"></img>';
                 document.getElementById('images').appendChild(img)
+                displayed_images.push(all_images[no]);
             }
         }
-         
     }
 }
 
