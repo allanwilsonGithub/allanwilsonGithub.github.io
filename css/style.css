@@ -1,9 +1,3 @@
-  body {
-    background-color: #c9d8c5;
-    padding-top: 60px;
-    background-image: url("http://allanwilson.net/media/jarno_mokki.jpg");
-  }
-
 <style>
   .color-1 {
     color: #B76EB8;
@@ -16,6 +10,25 @@
   }
   .large-text {
     font-size: 30px;
+  }
+  
+  .hero-image {
+    background-image: url("../media/jarno_mokki.jpg");
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
   }
 
   table, th, td {
