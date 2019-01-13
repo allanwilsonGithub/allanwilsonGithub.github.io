@@ -24,3 +24,24 @@ function Question(question, answers, correct) {
     this.answers = answers;
     this.correct = correct;
 }
+
+var q1 = new Question('Is Javascript the coolest programming language in the world?',
+                       ['Yes', 'No'],
+                       0);
+
+var q2 = new Question('What is the name of this course\'s teacher?',
+                    ['John',
+                    'Michael',
+                     'Jonas'],
+                     2);
+
+var q3 = new Question('What best describes coding?',
+                    ['Boring',
+                    'Hard', 'Fun',
+                    'Tedious'],
+                    2);
+
+var questions = [q1 , q2, q3];
+
+var n = Math.floor(Math.random() * questions.length);
+console.log(questions[n]);
