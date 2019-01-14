@@ -41,6 +41,16 @@ if kenwood.on:
 else:
     print('The {0.make} kettle is off'.format(kenwood))
 
+Kettle.switch_off(kenwood)
+
+if kenwood.on:
+    print('The {0.make} kettle is on'.format(kenwood))
+else:
+    print('The {0.make} kettle is off'.format(kenwood))
+
+
+kenwood.power = 1.5
+print(kenwood.power)
 
 ###################################################
 
