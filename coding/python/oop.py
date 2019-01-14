@@ -12,6 +12,12 @@ class Kettle(object):
         self.price = price
         self.on = False
 
+    def switch_on(self):
+        self.on = True
+
+    def switch_off(self):
+        self.on = False
+
 
 kenwood = Kettle("Kenwood", 8.99)
 print(kenwood.make)
@@ -25,6 +31,18 @@ hamilton = Kettle("Hamilton", 14.55)
 print("Models: {} = {}, {} = {}".format(kenwood.make, kenwood.price, hamilton.make, hamilton.price))
 
 print("Models: {0.make} = {0.price}, {1.make} = {1.price}".format(kenwood, hamilton))
+
+print(kenwood.on)
+kenwood.switch_on()
+print(kenwood.on)
+
+if kenwood.on:
+    print('The {0.make} kettle is on'.format(kenwood))
+else:
+    print('The {0.make} kettle is off'.format(kenwood))
+
+
+###################################################
 
 
 class Movie(object):
