@@ -5,7 +5,9 @@ yAxis = []
 xAxis = []
 ground = []
 for i in range(1, 450):
-    alt = (math.sqrt((6371 * 6371) + (i * i))) - 6371
+    trueEarthRadius = 6371
+#   earthRadiusRefractionAccountedFor = 1.33 * trueEarthRadius       (check this)
+    alt = (math.sqrt((trueEarthRadius * trueEarthRadius) + (i * i))) - trueEarthRadius
     yAxis.append(i)
     xAxis.append(alt)
     ground.append(0)
