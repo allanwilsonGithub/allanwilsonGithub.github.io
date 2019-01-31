@@ -1,24 +1,3 @@
-/*
-function Question (question){
-    answers = [0, 1, 2, 3];
-    correctAnswer = 0;
-    console.log(question);
-
-}
-
-questions = ["What colour is Mars?\n(1) Red\n(2) Blue\n(3) Green","Is the Earth flat?\n(1) Yes\n(2) No"
-             ,"How many countries are in the UK?\n(1) 3\n(2) 4\n(3) 5"];
-answers = [1, 2, 2]
-
-function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
-}
-  
-console.log(getRandomInt(5));
-
-Question(questions[getRandomInt(4)]);
-*/
-
 (function(){
 
     function Question(question, answers, correct) {
@@ -28,15 +7,21 @@ Question(questions[getRandomInt(4)]);
     }
     
     Question.prototype.displayQuestion = function() {
-        console.log(this.question);
+        document.getElementById('question-line').textContent = this.question;
     
         for (var i = 0; i < this.answers.length; i++) {
-            console.log(i + ": " + this.answers[i]);
+            var para = document.createElement("P");
+            var t = document.createTextNode((i + ": " + this.answers[i]));
+            para.appendChild(t);
+            document.body.appendChild(para);
         }
     }
     
-    Question.prototype.checkAnswer = function(ans){
-        if (ans === this.correct){
+    Question.prototype.checkAnswer = function(){
+        var answer = parseInt(document.getElementById('answer-input').value);
+        console.log(answer);
+        console.log(this.correct);
+        if (answer === this.correct){
             console.log('Correct answer!')
         } else {
             console.log('Wrong answer :(')
@@ -70,8 +55,11 @@ Question(questions[getRandomInt(4)]);
     
     questions[n].displayQuestion();
     
-    var answer = parseInt(prompt('Please select te correct answer.'));
-    questions[n].checkAnswer(answer);
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "text");
+    x.setAttribute("id", "answer-input");
+    document.body.appendChild(x);
 
+    document.getElementById('check-answer-button').addEventListener('click', questions[n].checkAnswer('answer'));
 
 })();
