@@ -17,7 +17,7 @@
         }
     }
     
-    Question.prototype.checkAnswer = function(){
+    Question.prototype.checkAnswer = function() {
         var answer = parseInt(document.getElementById('answer-input').value);
         console.log(answer);
         console.log(this.correct);
@@ -60,6 +60,6 @@
     x.setAttribute("id", "answer-input");
     document.body.appendChild(x);
 
-    document.getElementById('check-answer-button').addEventListener('click', questions[n].checkAnswer('answer'));
+    document.getElementById('check-answer-button').addEventListener('click', questions[n].checkAnswer);
 
 })();
