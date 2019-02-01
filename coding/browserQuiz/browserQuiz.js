@@ -19,9 +19,7 @@
     
     Question.prototype.checkAnswer = function() {
         var answer = parseInt(document.getElementById('answer-input').value);
-        console.log(answer);
-        console.log(this.correct);
-        if (answer === this.correct){
+        if (answer === questions[n].correct){
             console.log('Correct answer!')
         } else {
             console.log('Wrong answer :(')
@@ -60,6 +58,6 @@
     x.setAttribute("id", "answer-input");
     document.body.appendChild(x);
 
-    document.getElementById('check-answer-button').addEventListener('click', questions[n].checkAnswer);
+    document.getElementById('check-answer-button').addEventListener('click', questions[n].checkAnswer.bind(this));
 
 })();
