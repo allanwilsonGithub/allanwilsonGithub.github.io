@@ -19,11 +19,18 @@
     
     Question.prototype.checkAnswer = function() {
         var answer = parseInt(document.getElementById('answer-input').value);
+        
+        var para = document.createElement("H1");
+        var t = document.createTextNode("This is a paragraph.");
+        
         if (answer === questions[n].correct){
-            console.log('Correct answer!')
+            var t = document.createTextNode("Yer right!");
         } else {
-            console.log('Wrong answer :(')
+            var t = document.createTextNode("Wrong answer bud :/");
         }
+        para.appendChild(t);
+        document.body.appendChild(para);
+
     }
     
     var q1 = new Question('Is Helsinki the capital of Finland?',
