@@ -7,6 +7,8 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
     accessToken: 'your.mapbox.access.token'
 }).addTo(mymap);
 
-var marker = L.marker([60.176995, 24.729481]).addTo(mymap);
+var marker1 = L.marker([60.176995, 24.729481]).addTo(mymap);
+var marker2 = L.marker([60.313812, 25.113475]).addTo(mymap);
 
-marker.bindPopup("<b>Ski track</b><br>car park").openPopup();
+marker1.bindPopup("<b>Ski track</b><br>car park").openPopup();
+marker2.bindPopup("<b>Kuusijärvi</b>").openPopup();
