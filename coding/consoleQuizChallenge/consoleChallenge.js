@@ -12,15 +12,27 @@
         for(var i = 0; i < this.answers.length; i++){
             console.log(i + ": " + this.answers[i]);
         }
+    }
+
+    Question.prototype.checkAnswer = function(ans, callback){
+        var sc;
+        
+        if (ans === this.correct){
+            console.log("Correct!");
+            sc = callback(true);
+        } else {
+            console.log("Wrong. Try again!");
+
+            sc = callback(false);
+        }
+
+        this.displayScore(sc);
 
     }
 
-    Question.prototype.checkAnswer = function(ans){
-        if (ans === this.correct){
-            console.log("Correct!")
-        } else {
-            console.log("Wrong. Try again!")
-        }
+    Question.prototype.displayScore = function(score) {
+        console.log('Your current score is: ' + score);
+        console.log('-----------------------------------------');
     }
 
     var q1 = new Question('Is Helsinki the capital of Finland?',
@@ -43,15 +55,38 @@
                         ['Broad Cairn',
                         'Driesh','Ben Nevis'],
                         2);
-
+    
     var questions = [q1 , q2, q3, q4];
 
-    var n = Math.floor(Math.random() * questions.length);
+    function score(){
+        var sc = 0;
+        return function(correct) {
+            if (correct) {
+                sc++;
+            }
+            return sc;
+        }
+    }
 
-    questions[n].displayQuestion();
+    var keepScore = score();
 
-    var answer = parseInt(prompt('Please select the correct answer:'));
+    function nextQuestion(){
+        
+        var n = Math.floor(Math.random() * questions.length);
 
-    questions[n].checkAnswer(answer);
+        questions[n].displayQuestion();
+
+        var answer = prompt('Please select the correct answer:');
+
+        if (answer != 'exit') {
+            questions[n].checkAnswer(parseInt(answer), keepScore);
+
+            //nextQuestion();
+
+        }
+        
+    }
+
+    nextQuestion();
 
 })();
