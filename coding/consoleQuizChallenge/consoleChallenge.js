@@ -71,7 +71,6 @@
     var keepScore = score();
 
     function nextQuestion(){
-        
         var n = Math.floor(Math.random() * questions.length);
 
         questions[n].displayQuestion();
@@ -81,7 +80,7 @@
         if (answer != 'exit') {
             questions[n].checkAnswer(parseInt(answer), keepScore);
 
-            //nextQuestion();
+        nextQuestion();
 
         }
         
