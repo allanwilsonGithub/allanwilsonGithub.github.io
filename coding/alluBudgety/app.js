@@ -13,6 +13,15 @@ var budgetController = (function() {
         this.value = value;
     };
 
+    var calculateTotal = function(type){
+        var sum = 0;
+
+        data.allItems[type].forEach(function(cur){
+
+            sum = sum + cur.value;
+
+        });
+    }
 
     var data = {
         allItems:{
@@ -49,6 +58,16 @@ var budgetController = (function() {
             // Return the new element
             return newItem;
             
+        },
+
+        calculateBudget: function() {
+
+            // Calculate total income and expenses
+
+            // Calculate the budget: income - expenses
+
+            // Calculate the percentage of income that we have spent
+
         },
 
         testing: function(){
@@ -132,7 +151,7 @@ var UIcontroller = (function(){
 
 // GLOBAL APP CONTROLLER
 var controller = (function(budgetCtrl, UICtrl){
-
+    2,345.64
     var setupEventListeners = function(){
         var DOM = UICtrl.getDOMstrings();
 
