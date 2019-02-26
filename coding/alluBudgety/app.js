@@ -18,9 +18,11 @@ var budgetController = (function() {
 
         data.allItems[type].forEach(function(cur){
 
-            sum = sum + cur.value;
+            sum += cur.value;
 
         });
+
+        data.totals[type] = sum;
     }
 
     var data = {
@@ -31,7 +33,9 @@ var budgetController = (function() {
         totals: {
             exp: 0,
             inc: 0
-        }
+        },
+        budget: 0,
+        percentage: -1
     }
 
     return {
@@ -63,11 +67,23 @@ var budgetController = (function() {
         calculateBudget: function() {
 
             // Calculate total income and expenses
+            calculateTotal('exp');
+            calculateTotal('inc');
 
             // Calculate the budget: income - expenses
+            data.budget = data.totals.inc - data.totals.exp;
 
             // Calculate the percentage of income that we have spent
+            data.percentage = Math.round((data.totals.exp / data.totals.inc) * 100);
+        },
 
+        getBudget: function(){
+            return {
+                budget: data.budget,
+                totalInc: data.totals.inc,
+                totalExp: data.totals.exp,
+                percentage: data.percentage
+            }
         },
 
         testing: function(){
@@ -151,7 +167,6 @@ var UIcontroller = (function(){
 
 // GLOBAL APP CONTROLLER
 var controller = (function(budgetCtrl, UICtrl){
-    2,345.64
     var setupEventListeners = function(){
         var DOM = UICtrl.getDOMstrings();
 
@@ -166,10 +181,13 @@ var controller = (function(budgetCtrl, UICtrl){
     
     var updateBudget = function(){
         // 1. Calculate the budget
+        budgetCtrl.calculateBudget();
 
         // 2. Return the budget
+        var budget = budgetCtrl.getBudget();
 
         // 3. Display te budget on the UI
+        console.table(budget);
     }
 
     var ctrlAddItem = function(){
