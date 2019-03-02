@@ -110,6 +110,7 @@ var UIcontroller = (function(){
         incomeLabel: '.budget__income--value',
         expensesLabel: '.budget__expenses--value',
         percentageLabel: '.budget__expenses--percentage',
+        container: '.container'
     };
     
     return {
@@ -128,13 +129,13 @@ var UIcontroller = (function(){
             if (type === 'inc') {
                 element = DOMstrings.incomeContainer;
 
-                html = '<div class="item clearfix" id="income-%id%"><div class="item__description">%description%</div>\
+                html = '<div class="item clearfix" id="inc-%id%"><div class="item__description">%description%</div>\
                 <div class="right clearfix"><div class="item__value">%value%</div><div class="item__delete">\
                 <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
             } else if (type === 'exp'){
                 element = DOMstrings.expensesContainer;
 
-                html = '<div class="item clearfix" id="expense-%id%"><div class="item__description">%description%</div>\
+                html = '<div class="item clearfix" id="exp-%id%"><div class="item__description">%description%</div>\
                 <div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">10%</div>\
                 <div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>\
                 </div></div></div>';
@@ -197,6 +198,9 @@ var controller = (function(budgetCtrl, UICtrl){
                 ctrlAddItem();
             }
         });
+
+        document.querySelector(DOM.container).addEventListener('click', ctrlDeleteItem);
+
     };
     
     var updateBudget = function(){
@@ -230,8 +234,27 @@ var controller = (function(budgetCtrl, UICtrl){
             // 5. Calculate and update budget
             updateBudget();
         }
- 
+
     };
+
+    var ctrlDeleteItem = function(event){
+        var itemID, splitID, type, ID;
+    
+        itemID = event.target.parentNode.parentNode.parentNode.parentNode.id;
+
+        if(itemID){
+            splitID = itemID.split('-');
+            type = splitID[0];
+            ID = splitID[1];
+
+            // 1. Delete item from data structure
+
+            // 2. Delete item from the UI
+
+            // 3. Update and show the new budget
+        }
+    }
+ 
 
     return {
         init: function(){
