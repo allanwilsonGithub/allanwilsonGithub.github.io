@@ -63,6 +63,12 @@ var budgetController = (function() {
             return newItem;
             
         },
+        
+        deleteItem: function(type, id) {
+
+            // id = 3
+
+        }
 
         calculateBudget: function() {
 
