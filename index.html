@@ -16,10 +16,21 @@
 
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/mapStyle.css" rel="stylesheet">
 
     <!-- Javascript Tooltip -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Leaflet CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
+    
+    <!-- Leaflet JS-->
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -101,10 +112,11 @@ $(document).ready(function(){
     </nav>
 
     <div class="hero-image">
-            <div class="hero-text">
-              <h1 style="font-size:50px"></h1>
-            </div>
-          </div>
+        <div class="hero-text">
+            <h1 style="font-size:50px"></h1>
+        </div>
+    </div>
+
 
     <!-- Page Content -->
         <div id="sports_and_hobbies">
@@ -304,3 +316,13 @@ $(document).ready(function(){
             <br>
             </div>
         </div>
+
+        <div>
+                <div id="mapid">
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </div>
+            </div>
+
+</body>
+
+<script src=coding/alluMap/alluMapStreet.js></script>
