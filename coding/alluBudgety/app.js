@@ -299,7 +299,9 @@ var UIcontroller = (function(){
                 month[10] = "November";
                 month[11] = "December";
                 var n = month[d.getMonth()];
-                return n;
+
+                var year = d.getFullYear();
+                return n + ' ' + year;
         },
 
 
