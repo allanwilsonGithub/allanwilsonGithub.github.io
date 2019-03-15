@@ -41,3 +41,18 @@ driversLicense6(true);
 /////////////////////////
 // Blocks and IIFEs
 
+//ES6 IIFE
+{
+    const a = 1;
+    let b = 2;
+    var c = 3;    // This works because var is not block scoped
+}
+
+//console.log(a + b);
+
+// ES5 IIFE
+(function(){
+    var d = 4;
+})();
+
+console.log(d);
