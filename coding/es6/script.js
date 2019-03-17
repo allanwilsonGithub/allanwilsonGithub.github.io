@@ -50,9 +50,70 @@ driversLicense6(true);
 
 //console.log(a + b);
 
-// ES5 IIFE
+/* ES5 IIFE
 (function(){
     var d = 4;
 })();
 
+
 console.log(d);
+*/
+
+//////////////////////////////////
+// Strings ES6
+
+let firstName = 'John';
+let lastName = 'Smith';
+const yearOfBirth = 1990;
+
+function calcAge(year){
+    return 2019 - year;
+}
+console.log(calcAge(yearOfBirth));
+
+//ES5
+console.log('This is ' + firstName + ' ' + lastName + '. He was born blah blah...');
+
+//ES6 Template literals:
+console.log(`This is ${firstName} ${lastName}`);
+
+///////////// Arrow functions
+const years = [1990, 1965, 1982, 1937];
+
+//ES5
+var ages5 = years.map(function(el){
+    return 2016 - el;
+})
+console.table({ages5});
+
+//ES6
+const ages6 = years.map(el => 2016 - el);
+console.table({ages6});
+
+const ages6a = years.map((el, index) => `Age element ${index + 1}: ${2019 - el}.`);
+console.table({ages6a});
+
+ages6b = years.map((el, index) => {
+    const now = new
+    Date().getFullYear();
+    const age = now - el;
+    return `Age element ${index + 1};
+    ${age}.`
+});
+console.table({ages6b});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
