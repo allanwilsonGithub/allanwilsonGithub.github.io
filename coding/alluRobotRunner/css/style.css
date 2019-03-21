@@ -1,10 +1,40 @@
 .box {
-    width: 200px;
+    width: 300px;
     padding: 60px;
-    text-align: center;
+    text-align: left;
     font-size: 30px;
     margin-top: 50px;
 }
+
+.arrow-button-left {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    width: 42px;
+    height: 42px;
+}
+.arrow-button-right {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    width: 42px;
+    height: 42px;
+}
+.arrow-button-up {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    width: 42px;
+    height: 42px;
+}
+.arrow-button-down {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    width: 42px;
+    height: 42px;
+}
+
 
 .green { background-color: green; }
 .blue { background-color: dodgerblue; }
