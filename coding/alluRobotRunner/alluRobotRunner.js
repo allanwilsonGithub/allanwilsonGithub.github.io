@@ -7,6 +7,7 @@ var robotRunner = (function(){
         document.querySelector('.arrow-button-up').addEventListener('click', moveRobotUp);
         document.querySelector('.arrow-button-down').addEventListener('click', moveRobotDown);
         document.querySelector('.arrow-button-right').addEventListener('click', moveRobotRight);
+        document.querySelector('.arrow-button-flash').addEventListener('click', flashRobotLights);
     };
  
     let moveRobotLeft = function () {
@@ -52,6 +53,17 @@ var robotRunner = (function(){
         xmlHttp.open("GET", 'http://127.0.0.1:8081/RobotRight', true); 
         xmlHttp.send(null);
         console.log("Robot moves right");
+    };
+
+    let flashRobotLights = function () {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(xmlHttp.responseText);
+        }
+        xmlHttp.open("GET", 'http://127.0.0.1:8081/RobotFlashLights', true); 
+        xmlHttp.send(null);
+        console.log("Robot flashes lights");
     };
 
     return {
