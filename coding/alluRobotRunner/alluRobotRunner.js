@@ -10,18 +10,47 @@ var robotRunner = (function(){
     };
  
     let moveRobotLeft = function () {
-        console.log("Robot moves left");
+        var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() { 
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                callback(xmlHttp.responseText);
+            }
+        xmlHttp.open("GET", 'http://127.0.0.1:8081/RobotLeft', true); 
+        xmlHttp.send(null);
+
+        console.log("Robot moves left ");
     };
 
     let moveRobotUp = function () {
-        console.log("Robot moves up");
+        var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() { 
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                callback(xmlHttp.responseText);
+            }
+        xmlHttp.open("GET", 'http://127.0.0.1:8081/RobotForward', true); 
+        xmlHttp.send(null);
+        console.log("Robot moves forward");
     };
 
     let moveRobotDown = function () {
-        console.log("Robot moves down");
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(xmlHttp.responseText);
+        }
+        xmlHttp.open("GET", 'http://127.0.0.1:8081/RobotBackward', true); 
+        xmlHttp.send(null);
+        console.log("Robot moves backward");
     };
 
     let moveRobotRight = function () {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(xmlHttp.responseText);
+        }
+        xmlHttp.open("GET", 'http://127.0.0.1:8081/RobotRight', true); 
+        xmlHttp.send(null);
         console.log("Robot moves right");
     };
 

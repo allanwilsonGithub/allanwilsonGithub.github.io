@@ -1,0 +1,1 @@
+f = open("backward.txt","w+")
