@@ -1,9 +1,0 @@
-Javascript notes:
-
-Arrays:
-.map       returns a new array with each value replaced by the result of your function
-.splice    deletes x items from a certain point
-.indexOf   gives the location (index) in the array.
-
-
-parseInt()   converts string to an integer.

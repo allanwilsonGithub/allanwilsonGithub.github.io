@@ -1,3 +1,4 @@
+/*
 // Lecture: let and const
 
 // ES5
@@ -57,7 +58,7 @@ driversLicense6(true);
 
 
 console.log(d);
-*/
+
 
 //////////////////////////////////
 // Strings ES6
@@ -121,7 +122,7 @@ var box5 = {
     }
 }
 box5.clickMe();
-*/
+
 
 // ES6  preserves the THIS keyword
 const box6 = {
@@ -282,7 +283,72 @@ const all = [h, ...boxes2];
 Array.from(all).forEach(cur => cur.style.color = 'purple');
 
 
+////// Rest parameters:
 
+//ES5
+function isFullAge5(){
+    //console.log(arguments);
+    var argsArr = Array.prototype.slice.call(arguments);
 
+    argsArr.forEach(function(cur){
+        console.log((2016 - cur) >= 18);
+    })
+}
 
+isFullAge5(1990,1999,1965, 2016, 1987);
 
+//ES6
+function isFullAge6(...years){
+    years.forEach(cur => console.log(2016 - cur)
+    >= 18);
+}
+
+isFullAge6(1990,1999,1965, 2016, 1987);
+
+function listTownsInScotland(...towns){
+    towns.forEach(cur => console.log(cur));
+}
+listTownsInScotland('Edinburgh','Glasgow');
+
+*/
+
+// Function constructor
+function SmithPerson(firstName, yearOfBirth, lastName = 'Smith', nationality = 'American'){
+    
+    this.firstName = firstName;
+    this.lastname = lastName;
+    this.yearOfBirth = yearOfBirth;
+    this.nationality = nationality;
+}
+
+var john = new SmithPerson('John', 1990);
+console.log(john);
+
+function car(colour, year, wheels = 4){
+    
+    this.colour = colour;
+    this.year = year;
+    this.wheels = wheels;
+}
+
+let skoda = new car('Green', 2016);
+
+// +++  ES6 Maps  +++ //
+// ES6 builtin type
+
+const question = new Map();
+question.set('question', 'That is the official name of the latest JS version?');
+question.set(1, 'ES5');
+question.set(2, 'ES6');
+question.set(3, 'ES2015');
+question.set(4, 'ES7');
+question.set('correct', 3);
+question.set(true, 'Correct answer :P');
+question.set(false, 'Wrong, please try again!');
+
+console.log(question.get('question'));
+question.forEach((value, key) => console.log('This is ${key}, and it\'s set to ${value}'));
+
+for (let [key, value] of question.entries()){
+    console.log('This is ${key}, and it\'s set to ${value}');
+}
