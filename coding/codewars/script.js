@@ -1,5 +1,6 @@
-function opposite(number) {
-    return number * -1;
-  }
+function removeChar(str){
+    str = str.substring(1);
+    return str.slice(0, -1);
+ };
 
-console.table(opposite(1),opposite(-3));
+ console.log(removeChar("abcdefg"));
