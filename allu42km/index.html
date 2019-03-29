@@ -7,11 +7,101 @@
 
 <body>
 
+<h3>Planned Runs</h3>
+
+<p id="demo1"></p>
+<p><a href="https://www.lansivaylajuoksu.fi/">Lansivaylajuoksu : 2019-04-28    17km</a><p id="demo"></p>
+<p id="demo2"></p>
+<p><a href="https://www.helsinkicityrunningday.fi/en/">Helsinki City Run : 2019-05-18    21km</a></p>
+<p id="demo3"></p>
+<p><a href="http://www.helsinkimarathon.fi/en/route/">Helsinki Marathon : 2019-08-24    42kms</a></p>
+<p id="demo4"></p>
+<p><a href="https://www.rantamaraton.fi/">Rantamarathon : 2019-09-21    42kms</a></p>
 <h3>Marathon Training Plan</h3>
 <p><a href="https://www.runnersworld.co.za/training/foolproof-beginners-marathon-training-programme/">Marathon Training Plan</a></p>    
 
 <h3>Strength Training</h3>
 <p><a href="https://www.coachmag.co.uk/running/5666/strength-training-for-runners-to-help-reduce-injuries">Strength 1</a></p>
 <p><a href="https://www.verywellfit.com/strengthening-workouts-for-runners-2911909">Strength 2</a></p>
+
+
+
+
+
+<script>
+// Set the date we're counting down to
+var countDownDate1 = new Date("Apr 28, 2019 00:00:00").getTime();
+var countDownDate2 = new Date("May 18, 2019 00:00:00").getTime();
+var countDownDate3 = new Date("Aug 24, 2019 00:00:00").getTime();
+var countDownDate4 = new Date("Sept 21, 2019 00:00:00").getTime();
+    
+    // Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance1 = countDownDate1 - now;
+  var distance2 = countDownDate2 - now;
+  var distance3 = countDownDate3 - now;
+  var distance4 = countDownDate4 - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days1 = Math.floor(distance1 / (1000 * 60 * 60 * 24));
+  var hours1 = Math.floor((distance1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes1 = Math.floor((distance1 % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds1 = Math.floor((distance1 % (1000 * 60)) / 1000);
+    
+  var days2 = Math.floor(distance2 / (1000 * 60 * 60 * 24));
+  var hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000);
+    
+  var days3 = Math.floor(distance3 / (1000 * 60 * 60 * 24));
+  var hours3 = Math.floor((distance3 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes3 = Math.floor((distance3 % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds3 = Math.floor((distance3 % (1000 * 60)) / 1000);
+    
+  var days4 = Math.floor(distance4 / (1000 * 60 * 60 * 24));
+  var hours4 = Math.floor((distance4 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes4 = Math.floor((distance4 % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds4 = Math.floor((distance4 % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo1").innerHTML = days1 + "d " + hours1 + "h "
+  + minutes1 + "m " + seconds1 + "s ";
+
+  document.getElementById("demo2").innerHTML = days2 + "d " + hours2 + "h "
+  + minutes2 + "m " + seconds2 + "s ";
+    
+  document.getElementById("demo3").innerHTML = days3 + "d " + hours3 + "h "
+  + minutes3 + "m " + seconds3 + "s ";
+    
+    document.getElementById("demo4").innerHTML = days4 + "d " + hours4 + "h "
+  + minutes4 + "m " + seconds4 + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance1 < 0) {
+    clearInterval(x);
+    document.getElementById("demo1").innerHTML = "EXPIRED";
+  }
+  if (distance2 < 0) {
+    clearInterval(x);
+    document.getElementById("demo2").innerHTML = "EXPIRED";
+  }
+  if (distance3 < 0) {
+    clearInterval(x);
+    document.getElementById("demo3").innerHTML = "EXPIRED";
+  }
+  if (distance4 < 0) {
+    clearInterval(x);
+    document.getElementById("demo4").innerHTML = "EXPIRED";
+  }
+    
+}, 1000);
+</script>
+
 </body>
 </html>
+
