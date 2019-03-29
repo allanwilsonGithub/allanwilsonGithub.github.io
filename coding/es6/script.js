@@ -346,9 +346,21 @@ question.set('correct', 3);
 question.set(true, 'Correct answer :P');
 question.set(false, 'Wrong, please try again!');
 
-console.log(question.get('question'));
-question.forEach((value, key) => console.log('This is ${key}, and it\'s set to ${value}'));
+/*
+for (let [key, value] of question.entries()){
+    console.log(`This is ${key}, and it's set to ${value}`);
+}
+*/
 
 for (let [key, value] of question.entries()){
-    console.log('This is ${key}, and it\'s set to ${value}');
+    if (typeof(key) === 'number'){
+        console.log(`Answer= ${key}: ${value}`);
+    }
+}
+
+const userInput = parseInt(window.prompt("Enter key: "));
+for (let [key, value] of question.entries()){
+    if (key === userInput){
+        console.log(`${key} : ${value}`);
+    }
 }

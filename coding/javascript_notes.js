@@ -129,5 +129,13 @@ console.log(question.size);
 if (question.has(4)){
     question.delete(4);
 }
-
 question.clear();   // Delete all content
+
+for (let [key, value] of question.entries()){
+    if (typeof(key) === 'number'){
+        console.log(`Answer= ${key}: ${value}`);
+    }
+}
+
+
+// +++  ES6 Classes +++ //
