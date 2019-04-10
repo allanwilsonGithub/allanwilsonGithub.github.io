@@ -1,6 +1,6 @@
-function removeChar(str){
-    str = str.substring(1);
-    return str.slice(0, -1);
- };
+function noSpace(x){
+    y = x.replace(/ /g, '');
+    return y;
+}
 
- console.log(removeChar("abcdefg"));
+console.log(noSpace('abc def    gh   i   j'));

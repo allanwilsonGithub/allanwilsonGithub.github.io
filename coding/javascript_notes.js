@@ -97,20 +97,20 @@ const{firstName_6, lastName_6} = obj;
 
 
 //  +++ ES6 Template Literals  +++ //
-// Variable replacement in strings
+// Variable replacement in strings//Arrow Functions
 let firstName = 'John';
 let lastName = 'Smith';
-console.log(`This is ${firstName} ${lastName}`);
+console.log(`This is ${firstName} //Arrow//  +++ ES6 Loops  +++ //Functions{lastName}`);
 
-// +++  ES6 Default parameters  +++ //
-function car(colour, year, wheels = 4){
+// +++  ES6 Default parameters  ++//Arrow//  +++ ES6 Loops  +++ //Functions //
+function car(colour, year, wheels //Arrow//  +++ ES6 Loops  +++ //Functions 4){
     
-    this.colour = colour;
+    this.colour = colour;// Ternar//Arrow Functions operator
     this.year = year;
-    this.wheels = wheels;
-}
-
-let skoda = new car('Green', 2016);
+    this.wheels = wheels;// Ternar//A//  +++ ES6 Loops  +++ //rrow Functions operator
+}//  +++ ES6 Loops  +++ //
+//  +++ ES6 Loops  +++ //
+let skoda = new car('Gree// Ternary o//  +++ ES6 Loops  +++ //perator
 
 // +++  ES6 Maps  +++ //
 // ES6 builtin type
@@ -118,7 +118,7 @@ const question = new Map();
 question.set('question', 'That is the official name of the latest JS version?');
 question.set(1, 'ES5');
 question.set(2, 'ES6');
-question.set(3, 'ES2015');
+question.set(3, 'ES2015');//Arrow Functions
 question.set(4, 'ES7');
 question.set('correct', 3);
 question.set(true, 'Correct answer :P');
@@ -127,7 +127,7 @@ question.set(false, 'Wrong, please try again!');
 console.log(question.get('question'));
 console.log(question.size);
 if (question.has(4)){
-    question.delete(4);
+    question.delete(4);// +++  ES6 Destructuring  +++ //
 }
 question.clear();   // Delete all content
 
@@ -139,3 +139,47 @@ for (let [key, value] of question.entries()){
 
 
 // +++  ES6 Classes +++ //
+
+/*
+//Arrays:
+  .map       returns a new array with each value replaced by the result of your function
+  .splice    deletes x items from a certain point
+  .indexOf   gives the location (index) in the array.
+  .reduce    loops through all elements adding them all together
+
+//RANDOM
+parseInt()   converts string to an integer.
+
+// Callback functions
+// ES6 Destructuring
+// ES6 Template Literals
+// ES6 Default parameters
+// ES6 Maps
+// ES6 builtin type
+// Function Constructor
+// ES6  Ternary operator
+// ES6 Classes
+
+class element {
+    constructor (name, buildYear){
+        this.name = name;
+        this.buildYear = buildYear;
+    }
+}
+
+// ES6 Superclasses
+
+class Park extends Element {
+    constructor (name, buildYear, area, numTrees){
+        super(name, buildYear);
+        this.area = area;  //km2
+        this.numTrees = numTrees;
+    }
+// ES6 Subclasses
+// ES6 Rest parameters
+// Spread operator
+// Arrow Functions
+// ES6 Loops
+// ES6 Arrays
+
+*/
