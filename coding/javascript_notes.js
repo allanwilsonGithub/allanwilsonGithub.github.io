@@ -146,6 +146,7 @@ for (let [key, value] of question.entries()){
   .splice    deletes x items from a certain point
   .indexOf   gives the location (index) in the array.
   .reduce    loops through all elements adding them all together
+  .findIndex 
 
 //RANDOM
 parseInt()   converts string to an integer.
