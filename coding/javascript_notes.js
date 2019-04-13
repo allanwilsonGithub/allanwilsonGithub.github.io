@@ -183,4 +183,11 @@ class Park extends Element {
 // ES6 Loops
 // ES6 Arrays
 
+// Callback hell
+// Promises
+
+Keeps track of whether events have happened or not, and what happens next
+Timer returning or a AJAX call coming back from the server
+
+Promise pending > settled/resolved > fulfilled OR rejected 
 */
