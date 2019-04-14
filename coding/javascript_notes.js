@@ -190,4 +190,20 @@ Keeps track of whether events have happened or not, and what happens next
 Timer returning or a AJAX call coming back from the server
 
 Promise pending > settled/resolved > fulfilled OR rejected 
+
+// async functions
+// await
+
+// AJAX : asyncronous javascript and XML
+// API : Applicaton programming interface API endpoint
+
+TODO: use APIs in own website: GoogleMaps, Movie data, weather data, youtube videos, email, SMS
+
+// Fetch:
+// CORS: cross origin resourcce sharing. Allows JS to fetch from non-local domains
+
+
+metaweather.com/API
+crossorigin.me
+
 */
