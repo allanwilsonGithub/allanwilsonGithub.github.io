@@ -206,4 +206,14 @@ TODO: use APIs in own website: GoogleMaps, Movie data, weather data, youtube vid
 metaweather.com/API
 crossorigin.me
 
+// webpack //
+
+// ES6 modules
+default exports
+named exports
+
+try / catch
+
+redux = state management libary used with REACT
+
 */
