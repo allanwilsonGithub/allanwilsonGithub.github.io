@@ -11,8 +11,11 @@ var marker1 = L.marker([60.176995, 24.729481]).addTo(mymap);
 var marker2 = L.marker([60.313812, 25.113475]).addTo(mymap);
 var marker3 = L.marker([56.476448, -2.889942]).addTo(mymap);
 var marker4 = L.marker([-27.486520, 153.025702]).addTo(mymap);
+var marker5 = L.marker([66.669735, 25.349294]).addTo(mymap);
+
 
 marker1.bindPopup("<b>Ski track</b><br>car park").openPopup();
 marker2.bindPopup("<b>Kuusijärvi</b>").openPopup();
 marker3.bindPopup("<b>Claypotts</b>").openPopup();
 marker4.bindPopup("<b>Brisbane</b>").openPopup();
+marker5.bindPopup("<b>Avovesi_2019_1_Mellalampi</b>").openPopup();
