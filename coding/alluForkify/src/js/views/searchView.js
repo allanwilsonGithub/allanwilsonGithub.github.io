@@ -10,7 +10,30 @@ export const clearResults = () => {
     elements.searchResList.innerHTML = '';
 };
 
+const limitRecipeTitle = (recipe, limit = 17) => {
+    if (recipe.length > limit) {
+        recipe = recipe.slice(0,limit) + '...';
+    }
+    return recipe;
+};
+// Pasta and spinich with egg
+const limitRecipeTitleUsingReduce = (title, limit = 17) => {
+    const newTitle = [];
+    if (title.length > limit) {
+        title.split(' ').reduce((acc, cur) => {
+            if (acc + cur.length <= limit) {
+                newTitle.push(cur);
+            }
+            return acc + cur.length;
+        }, 0);
+
+        return `${newTitle.join(' ')} ...`;
+    }
+    return title;
+};
+
 const renderRecipe = recipe => {
+    recipe.title = limitRecipeTitleUsingReduce(recipe.title, 17);
     const markup = `
         <li>
             <a class="results__link" href="#${recipe.recipe_id}">
