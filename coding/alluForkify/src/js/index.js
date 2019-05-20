@@ -26,12 +26,22 @@ const controlSearch = async () => {
         searchView.clearResults();
         renderLoader(elements.searchRes);
 
+
+      try {
+
       // 4) Search for recipes
-        await state.search.getResults();
+      await state.search.getResults();
     
       // 5) Render results on UI
         clearLoader();
         searchView.renderResults(state.search.result);
+
+      } catch (err) {
+        alert('Something went wrong with the search...');
+        clearLoader();
+
+      }
+
     }
 }
 
@@ -62,7 +72,9 @@ const controlRecipe = async () => {
 
     // Create new recipe object
     state.recipe = new Recipe(id);
-    
+
+    try {
+
     // Get recipe data
     await state.recipe.getRecipe();
 
@@ -72,6 +84,12 @@ const controlRecipe = async () => {
 
     // Render recipe
     console.log(state.recipe);
+
+    } catch (err) {
+        alert('Error processing recipe');
+    }
+    
+
   }
 }
 
