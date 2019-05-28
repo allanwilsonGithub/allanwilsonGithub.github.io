@@ -15,6 +15,7 @@ import { elements, renderLoader, clearLoader } from './views/base';
  */
 
 const state = {};
+window.state = state;
 
 
 const controlSearch = async () => {
@@ -111,6 +112,7 @@ const controlRecipe = async () => {
 /**
  * LIST CONTROLLER
  */
+
 const controlList = () => {
   // Create a new list IF there is none yet
   if (!state.list) state.list = new List();
@@ -122,6 +124,20 @@ const controlList = () => {
       listView.renderItem(item);
   });
 }
+
+// Handle delete and update list item events
+elements.shopping.addEventListener('click', e => {
+    const id = e.target.closest('.shopping__item').dataset.itemid;
+
+    // Handle the delete button
+    if (e.target.matches('.shopping__delete, .shopping__delete *')) {
+      // Delete from state
+      state.list.deleteItem(id);
+      
+      // Delete from UI
+      listView.deleteItem(id);
+    }
+})
 
 // Handling recipe button clicks
 elements.recipe.addEventListener('click', e => {
