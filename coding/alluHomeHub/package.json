@@ -7,7 +7,7 @@
     "test": "jest",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open"
+    "start": "webpack-dev-server --mode development --open --port 3000 --hot --host 192.168.1.111"
   },
   "author": "Allan Wilson",
   "license": "ISC",
