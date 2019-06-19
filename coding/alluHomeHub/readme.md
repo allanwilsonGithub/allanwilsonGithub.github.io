@@ -1,6 +1,9 @@
-1) sudo apt-get install curl software-properties-common
-2) curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-3) sudo apt-get install -y nodejs
-4) In root dir:
-    $npm install
-5) $npm run start
+Commands to start webserver in root dir:
+
+sudo apt-get install curl software-properties-common
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
+npm install
+update package.json with private IP (ifconfig)
+create rule for AWS security group to allow port 3000 in
+npm run start
