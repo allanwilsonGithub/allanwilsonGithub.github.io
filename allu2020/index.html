@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>allanwilson.net</title>
+</head>
+
+<style>
+.timer {
+  color: DodgerBlue;
+  font-size: 30px;
+}
+.race-link{
+  font-size: 20px;
+}
+.table {
+  width:30%;
+}
+</style>
+    
+<body>
+
+<h2>Jan</h2>
+Ski<br>
+Swim<br>
+Climb<br>
+Handstand<br>
+PullUp<br>
+Weight<br>
+Nutrition<br>
+
+<h3>Marathon</h3>
+<table class='table'>
+  <tr>
+    <th>
+    <p id="demo1" class='timer'></p>
+    <p class='race-link'><a href="https://www.lansivaylajuoksu.fi/">Insert marathon here!</a><br>2020-06-01<br>42 km</p>
+    </th>
+  </tr>
+</table>
+
+<h3>Marathon Training Plan</h3>
+<p><a href="https://www.runnersworld.co.za/training/foolproof-beginners-marathon-training-programme/">Marathon Training Plan</a></p>    
+
+<h3>Strength Training</h3>
+<p><a href="https://www.coachmag.co.uk/running/5666/strength-training-for-runners-to-help-reduce-injuries">Strength 1</a></p>
+<p><a href="https://www.verywellfit.com/strengthening-workouts-for-runners-2911909">Strength 2</a></p>
+
+
+
+
+
+<script>
+// Set the date we're counting down to
+var countDownDate1 = new Date("Jun 1, 2020 00:00:00").getTime();
+    
+    // Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance1 = countDownDate1 - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days1 = Math.floor(distance1 / (1000 * 60 * 60 * 24));
+  var hours1 = Math.floor((distance1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes1 = Math.floor((distance1 % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds1 = Math.floor((distance1 % (1000 * 60)) / 1000);
+
+  // Output the result in an element with id="demo"
+  document.getElementById("demo1").innerHTML = days1 + "d " + hours1 + "h "
+  + minutes1 + "m " + seconds1 + "s ";
+
+  // If the count down is over, write some text 
+  if (distance1 < 0) {
+    clearInterval(x);
+    document.getElementById("demo1").innerHTML = "EXPIRED";
+  }
+
+}, 1000);
+</script>
+
+</body>
+</html>
+
